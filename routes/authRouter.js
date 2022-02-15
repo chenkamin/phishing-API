@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const express = require("express")
 const router = express.Router()
 const jwt = require('jsonwebtoken');
-const User = require('./../models/userShecma');
+const User = require('../models/userSchema');
 
 
 const signToken = id => {

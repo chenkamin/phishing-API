@@ -4,27 +4,31 @@ const router = express.Router()
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 const sendEmail = require('./../utils/email');
-
+const Emails = require('./../models/emailSchema')
 
 
 
 router.post('/email', async (req, res) => {
+    const { email } = req.body
+    console.log(email)
     const hash = crypto
         .createHash('sha256')
-        .update("sdfsdf" + Math.random())
+        .update(email + Math.random())
         .digest('hex');
 
-    await sendEmail({
-        email: "chenkamin@gmail.com",
-        subject: 'Your password reset token (valid for 10 min)',
-        message: "sdfdsfdssdf",
-        html: `<body>
-        <h1>POPO</h1>
-        <h4>dssdds</h4>
-        <a href="localhost:3000/api/v1/phishing/?token=${hash}">CRYPTO</a>
+    const user = Emails.findOneAndUpdate({ email: email }, { token: hash }, (err, result) => {
+        console.log(result)
+        sendEmail({
+            email: email,
+            html: `<body>
+        <h1>Happy New Year's</h1>
+        <h4>Pleaes check the link to choose your New year's gift</h4>
+        <a href="localhost:3000/api/v1/phishing/?token=${hash}&email=${email}">Click Here</a>
         </body>`
-    });
-    res.json("sdf")
+        });
+        console.log(user)
+        res.json("mail sended")
+    })
 });
 
 
