@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     console.log(req.query)
     const user = Emails.findOneAndUpdate({ email: req.query.email }, { phishingStatus: 1 }, (err, result) => {
         console.log(result)
-        res.json(req.query)
+        res.json("we stole all your money and passwords")
     });
 })
 

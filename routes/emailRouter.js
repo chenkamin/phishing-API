@@ -25,6 +25,7 @@ router.post('/email', async (req, res) => {
         console.log(result)
         sendEmail({
             email: email,
+            subject: "Happy new year's",
             html: `<body>
         <h1>Happy New Year's</h1>
         <h4>Pleaes check the link to choose your New year's gift</h4>

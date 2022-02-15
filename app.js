@@ -20,8 +20,8 @@ app.use('/sanity', (req, res) => {
 })
 
 app.use('/api/v1/users', authRouter);
-app.use('/api/v1/', protect, emailRouter);
 app.use('/api/v1/phishing', phishingRouter);
+app.use('/api/v1/', protect, emailRouter);
 app.use('/api/v1/data', data); //route for inserting emp's data.
 
 app.all('*', (req, res, next) => {
