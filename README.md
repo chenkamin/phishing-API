@@ -23,7 +23,7 @@ App:
 
 * i used https://mailtrap.io/ for the convenience
 
-#ui pages
+ui pages:
 - /login
 - /list
 
