@@ -32,7 +32,6 @@ FRONTEND
 - GET api/v1/phishing
 - POST api/v1/email -- to send email
 - GET /api/v1/emails --to get lists of the emails and statuses
-- 
 - If you are using postman:
 - You can view postman collection in the project and import it to postman if needed
 
