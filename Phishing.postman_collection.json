@@ -1,0 +1,187 @@
+{
+	"id": "44e8df3e-a50a-4657-bc23-a534fdef7307",
+	"name": "Phishing",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"1a18bb95-3739-4137-9ee7-46a7d3dd764f",
+		"e9dde843-1788-486e-9003-012209f97d97",
+		"4484f71f-261e-4a23-8933-a41ffb5bb0d0",
+		"3fdcd733-64af-49a6-876b-bca126448035",
+		"449c1261-5244-420f-b09d-6b9dce73cd4f",
+		"03a65fef-c779-4021-99dc-c55cd9b815d1",
+		"acb29db8-ac7e-4e07-90a0-b8b9fbba7124"
+	],
+	"folders_order": [],
+	"protocolProfileBehavior": {},
+	"folders": [],
+	"requests": [
+		{
+			"id": "03a65fef-c779-4021-99dc-c55cd9b815d1",
+			"name": "phishing route",
+			"url": "localhost:3000/api/v1/phishing?token=fdsf&email=sadfsadf",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "token",
+					"value": "fdsf",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "sadfsadf",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "1a18bb95-3739-4137-9ee7-46a7d3dd764f",
+			"name": "localhost:3000/sanity",
+			"url": "localhost:3000/sanity",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "3fdcd733-64af-49a6-876b-bca126448035",
+			"name": "send email",
+			"url": "localhost:3000/api/v1/email",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGJkNzljZjgyMmYyMTA2NGU2YTc3OCIsImlhdCI6MTY0NDk0MzI2MSwiZXhwIjoxNjUyNzE5MjYxfQ.nAp2lTf0R5SiizDLTmZFRjY2GkdQ-L-FVmt_rJS8gAA"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"email\":\"chenkamin@gmail.com\"\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "4484f71f-261e-4a23-8933-a41ffb5bb0d0",
+			"name": "localhost:3000/api/v1/protect",
+			"url": "localhost:3000/api/v1/protect",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGcivdvdOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGJiMGMyZWFkMzk2MDc2ZGE1N2UxYiIsImlhdCI6MTY0NDkzNDI3MiwiZXhwIjoxNjUyNzEwMjcyfQ.OwbnJwtbMgZrtVmv1-_QVIpK5GPN6RWPRSe88nKCtck"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "449c1261-5244-420f-b09d-6b9dce73cd4f",
+			"name": "list of emails",
+			"url": "localhost:3000/api/v1/email",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "acb29db8-ac7e-4e07-90a0-b8b9fbba7124",
+			"name": "login",
+			"url": "localhost:3000/api/v1/users/login",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"email\":\"chenkCC@gmail.com\",\n    \"password\":\"12345678\"\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "e9dde843-1788-486e-9003-012209f97d97",
+			"name": "signup",
+			"url": "localhost:3000/api/v1/users/signup",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"email\":\"chedsnkCC@gmail.com\",\n    \"password\":\"12345678\",\n    \"passwordConfirm\":\"12345678\",\n    \"name\":\"Kl\"\n}",
+			"pathVariables": {}
+		}
+	]
+}
