@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const authRouter = require('./routes/authRouter')
+const emailRouter = require('./routes/emailRouter')
 const { protect } = require('./middlewares/protect')
 //middleware
 //logs
@@ -20,6 +21,7 @@ app.use('/sanity', (req, res) => {
 })
 
 app.use('/api/v1/users', authRouter);
+app.use('/api/v1/', emailRouter);
 
 app.use('/api/v1/protect', protect, (req, res) => {
     res.send("pass")
