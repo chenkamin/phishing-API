@@ -11,11 +11,11 @@ BACKEND:
 - Clone the project.
 - npm i.
 - Create config.env and store the following variables:
--JWT_SECRET=type:string
--EMAIL_USERNAME=type:string
--EMAIL_PASSWORD=type:string
--EMAIL_HOST=type:string
--EMAIL_PORT=type:number
+- JWT_SECRET=type:string
+- EMAIL_USERNAME=type:string
+- EMAIL_PASSWORD=type:string
+- EMAIL_HOST=type:string
+- EMAIL_PORT=type:number
 - Run node server.js  \ nodemon server.js
 FRONTEND:
 - npm i 
