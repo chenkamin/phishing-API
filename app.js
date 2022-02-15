@@ -3,18 +3,16 @@ const app = express();
 const authRouter = require('./routes/authRouter')
 const emailRouter = require('./routes/emailRouter')
 const phishingRouter = require('./routes/phishingRouter')
+const cors = require('cors');
+
 const data = require('./routes/data')
 const { protect } = require('./middlewares/protect')
 //middleware
 //logs
 
 
-
-
-
-
-
 app.use(express.json({ limit: '10kb' }));
+app.use(cors())
 
 
 //routes
