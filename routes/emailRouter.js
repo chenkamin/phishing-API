@@ -1,8 +1,6 @@
 const crypto = require("crypto")
 const express = require("express")
 const router = express.Router()
-const nodemailer = require('nodemailer');
-const smtpTransport = require('nodemailer-smtp-transport');
 const sendEmail = require('./../utils/email');
 const Emails = require('./../models/emailSchema')
 

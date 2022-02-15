@@ -19,8 +19,6 @@ function Login() {
             console.log("200")
             return <Navigate to='/list' />;
         }
-
-        // const nextPage = await handleRedirect(data.data.user[0]);
         return data;
     };
 
@@ -43,7 +41,7 @@ function Login() {
                 className="btns-inputs"
             />
             <div onClick={login} className="btns-inputs login-btn"
-            >התחבר</div>
+            >login</div>
         </div>
     );
 }

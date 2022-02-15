@@ -12,7 +12,6 @@ function List() {
         const gettEmails = async () => {
             let res = await axios.get(
                 `http://localhost:3000/api/v1/emails`);
-            console.log(res.data);
             setEmails(res.data);
         };
         gettEmails();

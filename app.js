@@ -7,8 +7,7 @@ const cors = require('cors');
 
 const data = require('./routes/data')
 const { protect } = require('./middlewares/protect')
-//middleware
-//logs
+
 
 
 app.use(express.json({ limit: '10kb' }));
@@ -21,12 +20,10 @@ app.use('/sanity', (req, res) => {
 })
 
 app.use('/api/v1/users', authRouter);
-app.use('/api/v1/', emailRouter);
+app.use('/api/v1/', protect, emailRouter);
 app.use('/api/v1/phishing', phishingRouter);
-app.use('/api/v1/data', data);
-app.use('/api/v1/protect', protect, (req, res) => {
-    res.send("pass")
-})
+app.use('/api/v1/data', data); //route for inserting emp's data.
+
 app.all('*', (req, res, next) => {
     next(res.status(404).json({ message: "route not exists" }));
 });

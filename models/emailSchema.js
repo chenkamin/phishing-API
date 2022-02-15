@@ -17,6 +17,7 @@ const emailSchema = new mongoose.Schema({
     phishingStatus: {
         type: Boolean,
         required: true,
+        default: false
     },
     token: {
         type: String,

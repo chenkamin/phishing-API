@@ -3,7 +3,6 @@ import React, { useEffect, useContext } from "react";
 
 function Row({ props }) {
 
-    console.log(props)
 
     return (
         <div className="list-grid">

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 const Email = require('../models/emailSchema');
 
+//this route is for insert emp's emails
 
 router.post('/', async (req, res) => {
 
