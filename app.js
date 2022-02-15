@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const authRouter = require('./routes/authRouter')
-
+const { protect } = require('./middlewares/protect')
 //middleware
 //logs
 
@@ -21,6 +21,9 @@ app.use('/sanity', (req, res) => {
 
 app.use('/api/v1/users', authRouter);
 
+app.use('/api/v1/protect', protect, (req, res) => {
+    res.send("pass")
+})
 app.all('*', (req, res, next) => {
     next(res.status(404).json({ message: "route not exists" }));
 });
