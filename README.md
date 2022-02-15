@@ -7,9 +7,9 @@ Technologies : Nodejs, Mongo.
 
 
 App:
-BACKEND: 
+
 - Clone the project.
-- npm i.
+- backend:npm i.
 - Create config.env and store the following variables:
 - JWT_SECRET=type:string
 - EMAIL_USERNAME=type:string
@@ -17,8 +17,7 @@ BACKEND:
 - EMAIL_HOST=type:string
 - EMAIL_PORT=type:number
 - Run node server.js  \ nodemon server.js
-FRONTEND:
-- npm i 
+- frontend:npm i 
 - Run npm start
 
 
