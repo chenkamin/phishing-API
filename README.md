@@ -23,7 +23,9 @@ App:
 
 * i used https://mailtrap.io/ for the convenience
 
-
+#ui pages
+- /login
+- /list
 
 # endpoints:
 - POST api/v1/users/signup
