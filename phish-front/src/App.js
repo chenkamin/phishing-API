@@ -7,6 +7,8 @@ import {
   Route
 } from "react-router-dom";
 import Login from "./comps/Login";
+import List from "./comps/List";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/list" element={<List />} />
 
       </Routes>
     </BrowserRouter>

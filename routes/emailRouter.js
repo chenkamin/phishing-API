@@ -6,7 +6,14 @@ const smtpTransport = require('nodemailer-smtp-transport');
 const sendEmail = require('./../utils/email');
 const Emails = require('./../models/emailSchema')
 
+router.get('/emails', async (req, res) => {
 
+    await Emails.find({}).then(function (emails) {
+        res.json(emails)
+
+    });
+
+});
 
 router.post('/email', async (req, res) => {
     const { email } = req.body
